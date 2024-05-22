@@ -6,9 +6,7 @@ import 'antd/dist/reset.css';
 
 const { Header, Content, Footer } = Layout;
 const { Text } = Typography;
-// Cambia esta URL a la IP local del servidor
-//const socket = io('http://192.168.x.x:3010'); 
-const socket = io('http://localhost:3010');
+const socket = io(`http://${window.location.hostname}:3010`);
 
 function App() {
   const [isConnected, setIsConnected] = useState(false);
